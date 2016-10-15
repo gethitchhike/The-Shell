@@ -1,13 +1,18 @@
-<body class="home-template">
-<header id="site-head" style="background-image: url(https://media2.giphy.com/media/l0HlNaQ6gWfllcjDO/200.gif#3)">
+<body class="home-template">	
+<header id="site-head" >
+	<div id="particles" style="
+	    top: 0px;
+    /* position: fixed; */
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	">
+
+	</div>
     <div class="vertical animated bounceInDown">
         <div id="site-head-content" class="inner">
-        	<?php if (count($blog->Authors) == 1 && !empty($blog->Authors[0]->Avatar)) :?>
-					<a id="blog-logo" href="<?php echo $blog->URL;?>"><img src="<?php echo $blog->Authors[0]->Avatar;?>" alt="Blog Logo"></a>
-			<?php elseif (property_exists($blog,"Image")) :?>
-					<a id="blog-logo" href="<?php echo $blog->URL;?>"><img src="<?php echo $blog->Image;?>" alt="Blog Logo"></a>
-			<?php endif;?>
-            <h1 class="blog-title"><?php echo $blog->Name;?></h1>
+            <h1 class="blog-title"><a href="<?php echo $blog->URL;?>"><?php echo $blog->Name;?></a></h1>
             <h2 class="blog-description"><?php echo $blog->Subtitle;?></h2>
         </div>
     </div>

@@ -1,15 +1,24 @@
 <body class="post-template">
+<header id="site-head" >
+	<div id="particles" style="
+	    top: 0px;
+    /* position: fixed; */
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	">
+	</div>
+    <div class="vertical animated bounceInDown">
+        <div id="site-head-content" class="inner">
+            <h1 class="blog-title"><a href="<?php echo $blog->URL;?>"><?php echo $blog->Name;?></a></h1>
+            <h2 class="blog-description"><?php echo $blog->Subtitle;?></h2>
+        </div>
+    </div>
+</header>
 	<main class="content" role="main">
 
-		<article class="post tag-wort-zum-sonntag tag-politik">
-
-			<header class="post-header">
-				<?php if (count($blog->Authors) == 1 && !empty($blog->Authors[0]->Avatar)) :?>
-				<a id="blog-logo" href="<?php echo $blog->URL;?>"><img src="<?php echo $blog->Authors[0]->Avatar;?>" alt="Blog Logo"></a>
-			<?php elseif (property_exists($blog,"Image")) :?>
-			<a id="blog-logo" href="<?php echo $blog->URL;?>"><img src="<?php echo $blog->Image;?>" alt="Blog Logo"></a>
-		<?php endif;?>
-	</header>
+		<article class="post">
 
 	<span class="post-meta"><time datetime="<?php echo date("d.m.Y,H:i",$post->Date);?>"><?php echo date("d.m.Y,H:i",$post->Date);?></span>
 	<h1 class="post-title"><?php echo $post->Title;?></h1>
