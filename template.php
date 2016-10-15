@@ -35,9 +35,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="./themes/The-Shell/particles.min.js"></script>
-    <script src="./themes/The-Shell/instantclick.min.js" data-no-instant></script>
 	<script data-no-instant>
-		InstantClick.init();
 		particlesJS("particles", {
 		  "particles": {
 		    "number": {
