@@ -609,6 +609,12 @@ button, input, select, textarea {
     margin-right: 180px;
 }
 
+.post-footer .unit{
+    margin-top: -1em;
+    display: block;
+    margin-bottom: 1em;
+}
+
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
